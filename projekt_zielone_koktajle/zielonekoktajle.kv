@@ -1,0 +1,93 @@
+<CustLabel@Label>:
+    bold: True
+    text_size: self.size
+    size_hint: .1, .25
+    pos_hint: {'x': .02, 'y': .0}
+    font_size: self.size[1]-2   #size[1] is height
+    halign: 'left'
+
+<ToggleButton>:
+    on_state: app.root.on_state(self)
+    size_hint: .08, .25
+    text_size: self.size
+    #font_size: self.height/1.6
+    font_size: self.size[1]/1.55
+    bold: True if self.font_size < 11 else False
+    halign: 'center'
+    valign: 'middle'
+
+
+<MainScreen>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+    display: entry
+
+    BoxLayout:
+        id: Title
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+        size_hint: .4, .2
+
+        Label:
+            text: "Zielone koktajle"
+            bold: True
+            font_size: 35
+            color: [0, 1, 0, 1]
+            size_hint: .5, .9
+        Label:
+            text: u'Wybierz sk\u0142adniki, aby odnale\u017A\u0107 strony, na kt\u00F3rych wyst\u0119puje przepis'
+            font_size: 17
+            text_size: self.size
+            halign: 'left'
+            valign: 'top'
+
+    BoxLayout:
+        id: Togglebuttons
+        orientation: "vertical"
+        spacing: '10dp'
+
+        CustLabel:
+            text: "OWOCE"
+        StackLayout:
+            ToggleButtons:
+
+        CustLabel:
+            text: "WARZYWA"
+        StackLayout:
+            ToggleButtons:
+
+
+        CustLabel:
+            text: "NAPOJE"
+        StackLayout:
+            ToggleButtons:
+
+        CustLabel:
+            text: u'POZOSTA\u0141E'
+        StackLayout:
+            ToggleButtons:
+
+    BoxLayout:
+        id: Result
+        orientation: "horizontal"
+        padding: 20
+        spacing: 20
+        size_hint: .8, .3
+
+        Label:
+            text: "Wynik wyszukiwania:"
+            bold: True
+            font_size: 30
+            text_size: self.size
+            size_hint: .25, None
+        ScrollView:
+            id: scrlv
+            TextInput:
+                id: entry
+                hint_text: u'wybierz sk\u0142adniki..'
+                font_size: 20
+                #size_hint: .6, .9
+                size_hint: .9, None
+                height: max(self.minimum_height, scrlv.height)
