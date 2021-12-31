@@ -1,0 +1,346 @@
+<CustWidget@ToggleButton>:
+
+<CustLabel@Label>:
+    bold: True
+    font_size: 20
+    size_hint: .1, .25
+
+<MainScreen>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+    display: entry
+
+    BoxLayout:
+        id: Tytul
+        orientation: "vertical"
+        padding: 20
+        spacing: 30
+        #size_hint_y: None
+        #height: 80
+        size_hint: .4, .3
+
+        Label:
+            text: "Zielone koktajle"
+            bold: True
+            font_size: 35
+            color: [0, 1, 0, 1]
+
+        Label:
+            text: "Wybierz skladniki, aby znalezc strony, na ktorych wystepuje przepis"
+            font_size: 17
+
+
+
+    BoxLayout:
+        id: ToggleButtons
+        orientation: "vertical"
+        spacing: 10
+
+        canvas:
+            Color:
+                rgb: 0, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        CustLabel:
+            text: "OWOCE"
+
+        GridLayout:
+            rows: 5
+            cols: 6
+
+            CustWidget:
+                text: "ananas"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "arbuz"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "banan"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "borowka"
+                on_state: root.on_state(self.state, "borowki")
+            CustWidget:
+                text: "brzoskwinia"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "cytryna"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "daktyle"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "granat"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "grejpfrut"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "gruszka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "jablko"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "jagody"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kaka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kiwi"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "limonka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "maliny"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mandarynka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mango"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "melon"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "nektarynka"
+                on_state: root.on_state(self.state, "nektarynki")
+            CustWidget:
+                text: "owoce"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "owoce lesne"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "pomarancze"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "sliwki"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "truskawki"
+                on_state: root.on_state(self.state, self.text)
+
+        CustLabel:
+            text: "WARZYWA"
+        GridLayout:
+            rows: 3
+            cols: 6
+            CustWidget:
+                text: "awokado"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "brokul"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "burak"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "groszek zielony"
+                on_state: root.on_state(self.state, "zielony groszek")
+            CustWidget:
+                text: "jarmuz"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kapusta"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "marchewka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "ogorek"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "papryka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "pietruszka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "pomidor"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "roszponka"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "rukola"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "salata"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "seler naciowy"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "szpinak"
+                on_state: root.on_state(self.state, self.text)
+
+        CustLabel:
+            text: "NAPOJE"
+        GridLayout:
+            rows: 2
+            cols: 6
+
+            CustWidget:
+                text: "aloes"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "blonnik witalny"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "herbata biala"
+                on_state: root.on_state(self.state, "biala herbata")
+            CustWidget:
+                text: "herbata czerwona"
+                on_state: root.on_state(self.state, "czerwona herbata")
+            CustWidget:
+                text: "herbata zielona"
+                on_state: root.on_state(self.state, "zielona herbata")
+            CustWidget:
+                text: "mleko kokosowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mleko migdalowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mleko owsiane"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mleko ryzowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mleko sojowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "woda kokosowa"
+                on_state: root.on_state(self.state, self.text)
+
+
+        CustLabel:
+            text: "POZOSTALE"
+        GridLayout:
+            rows: 6
+            cols: 6
+
+            CustWidget:
+                text: "acai"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "amarantus"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "babka jajowata"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "babka plesznik"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "baobab"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "bazylia"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "chia"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "chlorella"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "czystek"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "goja"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "imbir"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "jeczmien"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "jeczmien zielony"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kasza gryczana"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kasza jaglana"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "kolendra"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "konopia"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "koperek"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "maslo orzechowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "mieta"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "orzechy nerkowca"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki gryczane"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki jaglane"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki jeczmienne"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki orkiszowe"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki owsiane"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "platki zytnie"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "pszenica"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "pylek pszczeli"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "quinoa"
+                on_state: root.on_state(self.state, "komosa ryzowa (quinoa)")
+            CustWidget:
+                text: "spirulina"
+                on_state: root.on_state(self.state, self.text)
+            CustWidget:
+                text: "tahini"
+                on_state: root.on_state(self.state, self.text)
+
+    BoxLayout:
+        id: Result
+        orientation: "horizontal"
+        padding: 20
+        spacing: 10
+        #size_hint_y: None
+        #height: 100
+        size_hint: .85, .3
+
+        Label:
+            text: "Wynik wyszukiwania:"
+            bold: True
+            font_size: 30
+            size_hint: .4, None
+        TextInput:
+            id: entry
+            hint_text: "wybierz skladniki.."
+            #hint_font_size: 5
+            font_size: 20

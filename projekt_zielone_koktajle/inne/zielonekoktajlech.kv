@@ -1,0 +1,214 @@
+<CustWidget@CheckBox>:
+    #size_hint: None, .15
+    #size_hint_x: .22 # to fajne ustawienie checkboxa
+
+
+<CustLabel@Label>
+    #size_hint_x: .22
+    size: self.texture_size
+    halign: "left"
+    valign: "middle"
+
+
+<MainScreen>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+    display: entry
+
+    BoxLayout:
+        id: Tytul
+        orientation: "vertical"
+        padding: 20
+        spacing: 10
+        size_hint_y: None
+        height: 80
+        canvas:
+            Color:
+                rgb: 0, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Zielone koktajle"
+            bold: True
+            font_size: 35
+        Label:
+            text: "Wybierz składniki aby znalezc strony, na ktorych wystepuje przepis"
+            font_size: 17
+
+    BoxLayout:
+        id: Checkboxes
+        orientation: "vertical"
+        #size_hint_x: .50
+        spacing: 10
+
+        Label:
+            text: "OWOCE"
+
+        GridLayout:
+            rows: 2
+            cols: 5
+
+            BoxLayout:
+                CustWidget:
+                    canvas:
+                        Color:
+                            rgb: 1, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    canvas:
+                        Color:
+                            rgb: 0, 1, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text:"banan"
+                    color: [1, 0, 0, 1]
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+            BoxLayout:
+                CustWidget:
+                    value: "jablko"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"jablko"
+                    size: self.texture_size
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+            BoxLayout:
+                CustWidget:
+                    value: "banan"
+                    on_active: root.on_state(self.active, self.value)
+                CustLabel:
+                    text:"banan"
+
+        Label:
+            text: "WARZYWA"
+        GridLayout:
+            rows: 2
+            cols: 5
+
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+
+        Label:
+            text: "INNE"
+        GridLayout:
+            rows: 2
+            cols: 5
+
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+            CustWidget:
+                value: "banan"
+                on_active: root.on_state(self.active, self.value)
+
+
+
+    BoxLayout:
+        id: Result
+        orientation: "horizontal"
+        padding: 20
+        spacing: 10
+        size_hint_y: None
+        height: 100
+        canvas:
+            Color:
+                rgb: 1, 0, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "Wynik wyszukiwania"
+            color: [1, 0, 0, 1]
+            bold: True
+            font_size: 35
+        TextInput:
+            id: entry
+            text: "wybierz skladniki.."
+            font_size: 15
